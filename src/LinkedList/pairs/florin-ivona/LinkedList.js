@@ -39,7 +39,7 @@ module.exports = class LinkedList {
 
         this.length--;
 
-        return currentHead;
+        return currentHead.value;
     }
 }
 

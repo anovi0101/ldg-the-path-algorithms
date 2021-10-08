@@ -33,7 +33,9 @@ describe('LinkedList', () => {
     })
     test('get first element', () => {
         const list = new LinkedList();
+        list.push(8);
         list.push(12);
+        expect(list.shift()).toBe(8);
         expect(list.shift()).toBe(12);
     })
     test('get first element', () => {
