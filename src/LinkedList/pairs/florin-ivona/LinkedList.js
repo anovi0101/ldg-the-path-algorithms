@@ -1,7 +1,7 @@
 module.exports = class LinkedList {
     constructor() {
-        this.tail = null
         this.head = null
+        this.tail = null
         this.length = 0
     }
 }

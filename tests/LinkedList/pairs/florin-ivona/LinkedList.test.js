@@ -6,7 +6,7 @@ describe('LinkedList', () => {
 
         expect(list).toBeDefined()
     })
-    test('push an element to the end of the list', () => {
+    test('push an element', () => {
         const list = new LinkedList()
         list.push(19)
         expect(list.push()).toBe(19)
