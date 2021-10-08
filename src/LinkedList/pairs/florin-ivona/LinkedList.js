@@ -20,6 +20,27 @@ module.exports = class LinkedList {
 
         return node;
     }
+
+    count(){
+        let listSize = 0;
+        let node = this.head;
+        while(node){
+            listSize++;
+            node=node.next;
+        }
+        return listSize;
+    }
+
+    shift() {
+        if (!this.head) return undefined;
+
+        let currentHead = this.head;
+        this.head = currentHead.next;
+
+        this.length--;
+
+        return currentHead;
+    }
 }
 
 class Node {
