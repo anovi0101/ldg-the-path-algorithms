@@ -42,4 +42,11 @@ describe('LinkedList', () => {
         const list = new LinkedList();
         expect(list.shift()).toBe(undefined);
     })
+    test('adds elements at the start of the list', () => {
+        const list = new LinkedList();
+        list.unshift(13);
+        list.unshift(9);
+        expect(list.head.value).toBe(9);
+    })
+
 })
