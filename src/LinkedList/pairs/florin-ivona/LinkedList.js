@@ -22,13 +22,7 @@ module.exports = class LinkedList {
     }
 
     count(){
-        let listSize = 0;
-        let node = this.head;
-        while(node){
-            listSize++;
-            node=node.next;
-        }
-        return listSize;
+        return this.length;
     }
 
     shift() {
