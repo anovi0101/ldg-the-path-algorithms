@@ -48,5 +48,28 @@ describe('LinkedList', () => {
         list.unshift(9);
         expect(list.head.value).toBe(9);
     })
-
+    test('pop the last element from the list', () => {
+        const list = new LinkedList();
+        list.push(2);
+        expect(list.pop()).toBe(2);
+    })
+    test('pop the last element from the list', () => {
+        const list = new LinkedList();
+        list.push(1);
+        list.push(17);
+        expect(list.pop()).toBe(17);
+    })
+    test('get an element from the list', () => {
+        const list = new LinkedList();
+        list.push(1);
+        list.push(7);
+        expect(list.get(0)).toBe(1);
+    })
+    test('get null when getting non-existing element from the list', () => {
+        const list = new LinkedList();
+        list.push(1);
+        list.push(7);
+        list.push(15);
+        expect(list.get(10)).toBe(null);
+    })
 })

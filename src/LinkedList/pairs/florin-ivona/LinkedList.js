@@ -51,6 +51,22 @@ module.exports = class LinkedList {
 
         return node.value;
     }
+
+    pop(){
+        if(!this.head){
+            return undefined;
+        }
+        let currentElement = this.head;
+        let newTail = currentElement;
+        while(currentElement.next){
+            newTail=currentElement;
+            currentElement=currentElement.next;
+        }
+        this.tail=newTail;
+        this.tail.next = null;
+        this.length--;
+        return currentElement.value;
+    }
 }
 
 class Node {
