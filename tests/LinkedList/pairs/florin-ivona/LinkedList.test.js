@@ -72,4 +72,22 @@ describe('LinkedList', () => {
         list.push(15);
         expect(list.get(10)).toBe(null);
     })
+    test('deletes the only item from a list', () => {
+        const list = new LinkedList();
+        list.push(8);
+        list.delete(8);
+        expect(list.count()).toBe(0);
+    })
+    test('deletes the element with the specified value from the list', () => {
+        const list = new LinkedList();
+        list.push(8);
+        list.push(10);
+        list.push(20);
+
+        list.delete(10);
+
+        expect(list.count()).toBe(2);
+        expect(list.pop()).toBe(20);
+        expect(list.shift()).toBe(8);
+    })
 })

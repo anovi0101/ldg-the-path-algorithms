@@ -25,6 +25,20 @@ module.exports = class LinkedList {
         return this.length;
     }
 
+    get(index) {
+        if(index < 0 || index >= this.length) return null;
+
+        let counter = 0;
+        let current = this.head;
+
+        while (counter !== index) {
+            current = current.next;
+            current++;
+        }
+
+        return current.value;
+    }
+
     shift() {
         if (!this.head) return undefined;
 
